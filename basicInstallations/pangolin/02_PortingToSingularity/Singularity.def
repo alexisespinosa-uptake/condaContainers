@@ -1,0 +1,7 @@
+Bootstrap: docker
+From: alexisespinosa/pangolin:latest
+
+%post
+/bin/mv /bin/sh /bin/sh.original
+/bin/ln -s /bin/bash /bin/sh
+echo "source activate pangolin" >> $SINGULARITY_ENVIRONMENT
